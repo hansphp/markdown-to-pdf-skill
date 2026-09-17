@@ -1,0 +1,6 @@
+interface:
+  display_name: "Markdown a PDF"
+  short_description: "Convierte Markdown a PDF y crea ejemplos explicados"
+  default_prompt: "Usa $markdown-to-pdf para convertir este documento Markdown a PDF."
+policy:
+  allow_implicit_invocation: true

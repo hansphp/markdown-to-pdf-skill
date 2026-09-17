@@ -1,0 +1,7 @@
+Asset: logo.png
+Created: 2026-09-16
+Generator: built-in imagegen tool
+Purpose: generic sample logo for the Markdown-to-PDF template.
+
+Prompt:
+Create a single clean generic sample logo for a Markdown-to-PDF software template. This is a brand-new logo, not a modification or imitation of an existing brand. Subject: a simple stylized folded paper/document icon to the left of the exact word 'EJEMPLO' in bold uppercase contemporary sans-serif letters. The icon can combine two overlapping document sheets and three short lines. Minimal flat graphic, solid dark teal (#155e75) and slate navy (#1e293b), with no gradients, textures or shadows. White or truly transparent background, crisp high contrast edges. Horizontal lockup with overall mark width about 3 times its height, tightly composed yet with small clean padding. This logo must be legible at approximately 36 mm wide in a PDF header and larger on a cover. No additional words, letters, watermark, trademark symbols, shields, cybersecurity imagery or known brand imagery. Output a PNG logo with a truly transparent background.

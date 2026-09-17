@@ -1,0 +1,469 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.48;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+main {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.25em 0 0.45em;
+  line-height: 1.2;
+  color: #111827;
+  break-after: avoid-page;
+}
+
+h1 {
+  margin-top: 0;
+  padding-bottom: 0.25em;
+  border-bottom: 2px solid #d1d5db;
+  font-size: 22pt;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16pt;
+}
+
+/* Leave room above technical titles for fractions and note calls. Chromium
+   omits a note's PDF destination if its link starts above the first page. */
+h1:has([data-document-math], .document-footnote-reference),
+h2[data-document-role="subtitle"]:has([data-document-math], .document-footnote-reference) {
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 13pt;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 11pt;
+}
+
+p {
+  margin: 0.55em 0;
+  orphans: 3;
+  widows: 3;
+}
+
+ul,
+ol {
+  margin: 0.45em 0 0.7em;
+  padding-left: 1.8em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+li.task-item {
+  list-style: none;
+  margin-left: -1.35em;
+  padding-left: 1.35em;
+  position: relative;
+}
+
+li.task-item > input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  width: 0.9em;
+  height: 0.9em;
+  margin: 0;
+}
+
+li.task-item > input + p {
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 0.8em 0;
+  padding: 0.25em 0.9em;
+  border-left: 4px solid #9ca3af;
+  color: #4b5563;
+  background: #f9fafb;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+code {
+  padding: 0.08em 0.28em;
+  border-radius: 3px;
+  font-family: Consolas, "Cascadia Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  background: #f3f4f6;
+}
+
+pre {
+  margin: 0.8em 0;
+  padding: 0.8em;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f8fafc;
+  break-inside: avoid-page;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+table {
+  width: 100%;
+  margin: 0.8em 0 1em;
+  border-collapse: collapse;
+  font-size: 9.2pt;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr {
+  break-inside: avoid-page;
+}
+
+th,
+td {
+  padding: 0.42em 0.55em;
+  border: 1px solid #9ca3af;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+th {
+  color: #111827;
+  background: #e5e7eb;
+  font-weight: 650;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+a {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: var(--image-max-height, 230mm);
+  margin: 0.8em auto;
+  object-fit: contain;
+  break-inside: avoid-page;
+}
+
+hr {
+  margin: 1.2em 0;
+  border: 0;
+  border-top: 1px solid #9ca3af;
+}
+
+.page-break {
+  break-after: page;
+  page-break-after: always;
+}
+
+.document-cover {
+  width: var(--paper-width, 210mm);
+  page: document-cover;
+  height: calc(var(--paper-height, 297mm) - 0.5mm);
+  padding: 20mm 16mm 18mm;
+  display: flex;
+  flex-direction: column;
+  gap: calc(14mm * var(--cover-scale, 1));
+  break-inside: avoid-page;
+  break-after: page;
+  page-break-after: always;
+  color: #1f2937;
+}
+
+.document-cover-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(10mm * var(--cover-scale, 1));
+  flex-shrink: 0;
+}
+
+.document-cover-logo {
+  width: calc(45mm * var(--cover-scale, 1));
+  max-height: calc(23mm * var(--cover-scale, 1));
+  margin: 0;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.document-cover-classification {
+  margin: 0 0 0 auto;
+  color: #4b5563;
+  font-size: max(8pt, calc(9pt * var(--cover-scale, 1)));
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-align: right;
+}
+
+.document-cover-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: calc(7mm * var(--cover-scale, 1));
+  width: 100%;
+}
+
+.document-cover [data-document-role="title"],
+.document-cover [data-document-role="subtitle"] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  line-height: 1.16;
+}
+
+.document-cover [data-document-role="title"] {
+  font-size: calc(32pt * var(--cover-scale, 1));
+  font-weight: 700;
+}
+
+.document-cover [data-document-role="subtitle"] {
+  color: #4b5563;
+  font-size: calc(18pt * var(--cover-scale, 1));
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.document-cover [data-document-role="metadata"] {
+  width: 100%;
+  max-width: 148mm;
+  margin: calc(5mm * var(--cover-scale, 1)) auto 0;
+  font-size: max(8pt, calc(10pt * var(--cover-scale, 1)));
+  table-layout: fixed;
+  break-inside: avoid-page;
+}
+
+.document-cover [data-document-role="metadata"] caption {
+  padding-bottom: calc(2.5mm * var(--cover-scale, 1));
+  font-size: max(7.5pt, calc(9pt * var(--cover-scale, 1)));
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.document-cover [data-document-role="metadata"] th,
+.document-cover [data-document-role="metadata"] td {
+  padding: calc(2.4mm * var(--cover-scale, 1)) calc(3mm * var(--cover-scale, 1));
+  border: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.document-cover [data-document-role="metadata"] tr > :first-child {
+  width: 30%;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.document-cover [data-document-role="metadata"] th {
+  background: #f3f4f6;
+}
+
+.document-cover [data-document-role="metadata"] tbody tr {
+  background: transparent;
+}
+
+.document-cover + .document-toc,
+.document-toc + .document-toc {
+  break-before: auto;
+  page-break-before: auto;
+}
+
+.document-toc {
+  break-before: page;
+  break-after: page;
+  /* Evita que Chrome fragmente el primer glifo y duplique el marcador. */
+  padding-top: 1px;
+}
+
+.document-toc h2 {
+  margin-top: 0;
+}
+
+.document-toc ol,
+.document-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.7em 0;
+}
+
+.document-toc li {
+  margin: 0;
+  padding: 0.3em 0;
+  break-inside: avoid-page;
+}
+
+.document-toc li[data-toc-level="1"] {
+  font-weight: 600;
+}
+
+.document-table-index li[data-toc-level="1"],
+.document-figure-index li[data-toc-level="1"] {
+  font-weight: 400;
+}
+
+.document-reference {
+  white-space: nowrap;
+}
+
+.document-toc li[data-toc-level="2"] { padding-left: 1.2em; }
+.document-toc li[data-toc-level="3"] { padding-left: 2.4em; }
+.document-toc li[data-toc-level="4"] { padding-left: 3.6em; }
+.document-toc li[data-toc-level="5"] { padding-left: 4.8em; }
+.document-toc li[data-toc-level="6"] { padding-left: 6em; }
+
+.document-toc a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.document-toc-label {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.document-toc-leader {
+  flex: 1 0 1em;
+  border-bottom: 1px dotted #9ca3af;
+}
+
+.document-toc-page {
+  flex: 0 0 4ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+caption,
+.document-figure-caption {
+  color: #374151;
+  font-size: 9.2pt;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  padding: 0 0 0.45em;
+  break-after: avoid-page;
+}
+
+.document-figure {
+  margin: 0.9em 0;
+  break-inside: avoid-page;
+}
+
+.document-figure img,
+.document-figure-inline img {
+  margin: 0 auto 0.45em;
+  max-height: calc(var(--image-max-height, 230mm) - 14mm);
+}
+
+.document-figure-caption {
+  display: block;
+  margin-top: 0.3em;
+  text-align: center;
+}
+
+.document-figure-inline {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0.4em 0;
+  vertical-align: top;
+  break-inside: avoid-page;
+}
+
+@media print {
+  a {
+    color: #1f2937;
+  }
+}
+
+.document-math-display {
+  margin: 1em 0;
+  break-inside: avoid;
+  overflow-wrap: normal;
+}
+
+[data-document-math] .katex {
+  font-size: 1.08em;
+}
+
+.document-footnotes {
+  margin-top: 1.8em;
+  border-top: 1px solid #cbd5e1;
+  font-size: 9pt;
+}
+
+.document-footnotes > h2 {
+  font-size: 14pt;
+}
+
+.document-footnotes-list > li {
+  padding-left: 0.35em;
+  margin-bottom: 0.9em;
+}
+
+.document-footnote-reference {
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.document-footnote-backlinks {
+  margin-top: 0.2em;
+}

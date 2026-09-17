@@ -1,0 +1,11 @@
+/* Paleta importada por personalizacion.css. Si esta hoja importara otra
+   hoja o usara url(...), sus rutas partirían de esta carpeta recursos/. */
+
+h1,
+h2,
+h3,
+caption,
+.document-figure-caption,
+.document-toc li[data-toc-level="1"] {
+  color: #155e75;
+}

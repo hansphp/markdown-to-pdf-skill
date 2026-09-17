@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="150" viewBox="0 0 720 150" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Pasos para preparar un documento</title>
+  <desc id="descripcion">Tres pasos conectados por flechas: escribir el Markdown, exportar a PDF y revisar el resultado.</desc>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="720" height="150" rx="12" fill="#f8fafc"/>
+  <g fill="#ffffff" stroke="#64748b" stroke-width="2">
+    <rect x="22" y="35" width="194" height="80" rx="10"/>
+    <rect x="263" y="35" width="194" height="80" rx="10"/>
+    <rect x="504" y="35" width="194" height="80" rx="10"/>
+  </g>
+  <g fill="none" stroke="#475569" stroke-width="2" marker-end="url(#flecha)">
+    <path d="M 221 75 H 254"/>
+    <path d="M 462 75 H 495"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1e293b" text-anchor="middle">
+    <text x="119" y="67">1. Escribir</text>
+    <text x="119" y="92">el Markdown</text>
+    <text x="360" y="67">2. Exportar</text>
+    <text x="360" y="92">a PDF</text>
+    <text x="601" y="67">3. Revisar</text>
+    <text x="601" y="92">el resultado</text>
+  </g>
+</svg>

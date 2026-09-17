@@ -1,0 +1,32 @@
+/* Estilos opcionales de ejemplo, sin fuentes ni recursos remotos.
+   Solicita al skill que use este archivo al exportar, o pasa su ruta
+   al conversor con --css. El archivo no se carga automáticamente.
+   Estos estilos afectan al cuerpo; el encabezado y el pie se configuran
+   con las opciones del conversor y usan plantillas independientes.
+   Esta hoja principal se inserta en el HTML: el @import parte de la
+   carpeta del Markdown, aunque personalizacion.css esté en recursos/. */
+
+@import "recursos/colores.css";
+
+h1 {
+  border-bottom-color: #0e7490;
+}
+
+h2 {
+  border-bottom-color: #a5c9d3;
+}
+
+th {
+  color: #164e63;
+  background: #e0f2f6;
+}
+
+blockquote {
+  border-left-color: #0e7490;
+  background: #f0f9fb;
+}
+
+caption,
+.document-figure-caption {
+  font-style: italic;
+}
