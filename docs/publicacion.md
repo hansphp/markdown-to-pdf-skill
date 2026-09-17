@@ -2,6 +2,8 @@
 
 Repositorio: [hansphp/markdown-to-pdf-skill](https://github.com/hansphp/markdown-to-pdf-skill). Compatible con Codex y Claude Code. El identificador interno permanece **`markdown-to-pdf`**.
 
+Primera versión estable: **v1.0.0**, disponible en [Releases](https://github.com/hansphp/markdown-to-pdf-skill/releases/tag/v1.0.0). El enlace [Latest](https://github.com/hansphp/markdown-to-pdf-skill/releases/latest) permite encontrar la publicación estable más reciente.
+
 ## Contrato de instalación
 
 | Dato | Valor |
@@ -54,3 +56,11 @@ La descarga pública, la instalación de dependencias y la conversión se compro
 4. Desde una carpeta temporal, repite la instalación mediante la URL pública real, prepara sus dependencias y genera el PDF de ejemplo con `--strict`. Confirma que Codex detecta `$markdown-to-pdf` desde otro proyecto.
 
 El [inicio del README](../README.md#instalar-el-skill-en-tu-codex) y [INSTALL.md](../.agents/skills/markdown-to-pdf/INSTALL.md#pedir-la-instalación-a-codex) incluyen la solicitud para una instalación futura.
+
+## Preparar una versión estable
+
+Cada publicación estable utiliza una etiqueta de versión y archivos generados desde el mismo commit. Para v1.0.0 se distribuyen el núcleo autónomo, el repositorio completo y `SHA256SUMS.txt`. La estructura y el uso de cada descarga están en [INSTALL.md](../.agents/skills/markdown-to-pdf/INSTALL.md#paquetes-de-la-publicación-estable).
+
+Genera los ZIP con `git archive` para incluir únicamente archivos versionados, sin `.git`, entornos ni cachés. Verifica el contenido extraído, las licencias, los recursos del manifiesto y una conversión estricta. Publica las sumas de ambos archivos. Conserva la etiqueta y los archivos de una versión publicada; los cambios posteriores deben recibir una versión nueva.
+
+Marca la publicación como estable y `Latest`, sin la opción de prerelease. Conserva en las notas los requisitos y el alcance de la validación: las pruebas actuales se ejecutan en macOS con Google Chrome; Windows/Linux tienen instrucciones, y la sesión real de Claude Code todavía no se ha verificado.

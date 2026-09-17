@@ -4,11 +4,11 @@ El paquete instalable es la carpeta **`.agents/skills/markdown-to-pdf`** del rep
 
 ## Pedir la instalación a Codex
 
-Para instalar desde el repositorio oficial, utiliza esta solicitud. Puedes sustituir `main` por una etiqueta publicada si necesitas una versión concreta:
+Para instalar la versión estable **v1.0.0**, utiliza esta solicitud. La etiqueta fija la versión del paquete; `main` contiene el desarrollo posterior:
 
 ```text
 Usa $skill-installer para instalar el skill de
-https://github.com/hansphp/markdown-to-pdf-skill/tree/main/.agents/skills/markdown-to-pdf
+https://github.com/hansphp/markdown-to-pdf-skill/tree/v1.0.0/.agents/skills/markdown-to-pdf
 Prepara sus dependencias Python en el entorno .venv de la carpeta instalada
 y comprueba que pueda generar un PDF de ejemplo.
 ```
@@ -26,7 +26,7 @@ Incluye la URL en una conversación nueva: el nombre del skill por sí solo no i
 El helper actual acepta estas opciones; sustituye también la ruta al helper por la del `skill-installer` que tengas instalado:
 
 ```shell
-python3 "/ruta/al/skill-installer/scripts/install-skill-from-github.py" --repo hansphp/markdown-to-pdf-skill --ref main --path .agents/skills/markdown-to-pdf
+python3 "/ruta/al/skill-installer/scripts/install-skill-from-github.py" --repo hansphp/markdown-to-pdf-skill --ref v1.0.0 --path .agents/skills/markdown-to-pdf
 ```
 
 El destino predeterminado del helper disponible durante esta revisión es `$CODEX_HOME/skills`, o `~/.codex/skills` si no se configura esa variable. La documentación actual también define `~/.agents/skills` como ubicación personal; el helper permite elegirla con `--dest`. Usa la ubicación que corresponda a tu instalación de Codex y confirma su detección, evitando copias duplicadas. Las ubicaciones de descubrimiento y el uso de `skill-installer` se describen en la [documentación oficial](https://learn.chatgpt.com/docs/build-skills).
@@ -70,3 +70,25 @@ También puedes copiar esta carpeta a `.agents/skills/markdown-to-pdf/` dentro d
 El adaptador de Claude Code se distribuye en `.claude/skills/markdown-to-pdf/` del repositorio completo. Para ese agente copia ambas carpetas al proyecto y usa `/markdown-to-pdf`. Una instalación personal de este paquete en Codex no instala automáticamente el adaptador de Claude Code.
 
 El [manual](README.md) contiene todas las opciones y la [plantilla incluida](assets/ejemplo/documento.md) permite crear ejemplos sin archivos de la raíz del repositorio.
+
+## Paquetes de la publicación estable
+
+La [publicación v1.0.0](https://github.com/hansphp/markdown-to-pdf-skill/releases/tag/v1.0.0) ofrece:
+
+| Archivo | Contenido y uso |
+| --- | --- |
+| `markdown-to-pdf-v1.0.0.zip` | Skill autónomo dentro de `markdown-to-pdf/`. Coloca esa carpeta completa en una ubicación de skills reconocida por Codex y prepara allí sus dependencias. |
+| `markdown-to-pdf-skill-v1.0.0.zip` | Repositorio completo dentro de `markdown-to-pdf-skill-v1.0.0/`, con entradas para Codex y Claude Code, documentación, PDFs y capturas. Abre esa carpeta como proyecto y sigue su README. |
+| `SHA256SUMS.txt` | Sumas SHA-256 de ambos ZIP para comprobar las descargas. |
+
+Si integras las carpetas del paquete completo en un proyecto existente, conserva sus instrucciones `AGENTS.md` y `CLAUDE.md` e incorpora las indicaciones que necesites; no reemplaces esos archivos sin revisar su contenido.
+
+Los ZIP no incluyen entornos virtuales, credenciales ni un navegador. El instalador de Codex usa la carpeta del repositorio en la etiqueta indicada; para esa instalación no necesitas descargar los ZIP manualmente. El enlace [Latest](https://github.com/hansphp/markdown-to-pdf-skill/releases/latest) muestra la publicación estable más reciente, pero no es una etiqueta Git para el instalador.
+
+Para verificar los dos ZIP descargados junto a `SHA256SUMS.txt`, en macOS:
+
+```shell
+shasum -a 256 -c SHA256SUMS.txt
+```
+
+En Linux usa `sha256sum -c SHA256SUMS.txt`. En PowerShell calcula `Get-FileHash ./*.zip -Algorithm SHA256` y compara los valores con el archivo de sumas.

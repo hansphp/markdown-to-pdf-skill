@@ -4,19 +4,21 @@ Convierte archivos Markdown en PDFs con portada opcional, índices enlazados, ta
 
 [Ejemplo de una página](ejemplo-markdown-pdf/basico.pdf) · [Ejemplo completo](ejemplo-markdown-pdf/documento.pdf) · [Galería de resultados](ejemplo-markdown-pdf/README.md#capturas-del-resultado) · [Manual de opciones](.agents/skills/markdown-to-pdf/README.md)
 
+Versión estable: [v1.0.0](https://github.com/hansphp/markdown-to-pdf-skill/releases/tag/v1.0.0) · [Última publicación estable](https://github.com/hansphp/markdown-to-pdf-skill/releases/latest)
+
 ## Instalar el skill en tu Codex
 
-Puedes pedir la instalación desde este repositorio sin clonarlo completo:
+Para instalar la versión estable sin clonar el repositorio completo:
 
 ```text
 Usa $skill-installer para instalar el skill de
-https://github.com/hansphp/markdown-to-pdf-skill/tree/main/.agents/skills/markdown-to-pdf
+https://github.com/hansphp/markdown-to-pdf-skill/tree/v1.0.0/.agents/skills/markdown-to-pdf
 Prepara sus dependencias Python en la carpeta instalada y verifica un PDF de ejemplo.
 ```
 
 La carpeta instalable es **`.agents/skills/markdown-to-pdf`**; el nombre interno sigue siendo **`markdown-to-pdf`**. Incluye la URL cuando lo pidas en una conversación nueva: el nombre por sí solo no identifica el repositorio. El instalador copia el paquete; las dependencias Python se preparan después. La [guía de instalación autónoma](.agents/skills/markdown-to-pdf/INSTALL.md) cubre instalación personal, por proyecto y uso desde otra carpeta.
 
-Para usar una copia completa del repositorio, sigue los pasos siguientes.
+La etiqueta `v1.0.0` fija la versión instalada; `main` contiene el desarrollo posterior. También puedes descargar los [paquetes de la publicación](https://github.com/hansphp/markdown-to-pdf-skill/releases/tag/v1.0.0), con sus sumas SHA-256. Para usar una copia completa del repositorio, sigue los pasos siguientes.
 
 ## Empezar
 
