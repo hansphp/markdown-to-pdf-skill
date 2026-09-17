@@ -130,7 +130,7 @@ Consulta el [manual completo](.agents/skills/markdown-to-pdf/README.md) para sin
 | [AGENTS.md](AGENTS.md) y [CLAUDE.md](CLAUDE.md) | Orientación breve para trabajar en este repositorio. |
 | [Guía de integración](docs/integracion-agentes.md) | Instalación por proyecto y alcance de las pruebas de ambos agentes. |
 | [Instalación desde GitHub](.agents/skills/markdown-to-pdf/INSTALL.md) | Paquete autónomo, ubicación personal y preparación de dependencias. |
-| [Publicación](docs/publicacion.md) | Nombre sugerido, contenido distribuido y comprobaciones para GitHub. |
+| [Publicación](docs/publicacion.md) | Distribución, contenido publicado y comprobaciones de instalación desde GitHub. |
 
 Las pruebas y el motor están en `.agents/skills/markdown-to-pdf/`. Para ejecutar la suite completa con navegador en macOS/Linux:
 

@@ -31,22 +31,22 @@ El `.gitignore` excluye `.venv`, cachés, archivos temporales del sistema y conf
 git ls-files --cached --others --exclude-standard
 ```
 
-## Estado de la revisión local
+## Publicación y verificación
 
-Revisión del **16 de septiembre de 2026**:
+Publicado en `main` y verificado el **16 de septiembre de 2026**, con autor **Hans Herrera** (`hans.php@gmail.com`), conservando el historial existente:
 
 - Metadatos válidos del skill y detección nativa de Codex comprobada tanto en este proyecto como en un repositorio temporal que contiene solo el paquete: una entrada habilitada y cero errores, desde la raíz y una subcarpeta.
 - Paquete autónomo: las instrucciones y recursos se resuelven desde el skill instalado, sin depender del proyecto original.
-- Instalador de Codex probado con la URL de una carpeta y un ZIP local equivalente a la descarga de GitHub: extracción, validación, copia exacta y rechazo de una instalación duplicada.
+- Instalador de Codex ejecutado contra la URL pública real del skill: descarga, extracción y copia de 117 archivos idénticos al paquete publicado. Codex detectó el paquete descargado como una entrada habilitada, sin errores. El rechazo de una instalación duplicada se verificó también con un ZIP local.
 - Entorno `.venv` creado desde cero en la instalación temporal, seis dependencias instaladas desde `requirements.txt` y `pip check` sin conflictos. Conversión desde otra carpeta con espacios: PDF de 14 páginas con portada, índices, Mermaid, fórmulas y notas, en modo estricto y sin modificar el Markdown. También se comprobó la reutilización automática de ese entorno al iniciar con otro Python.
 - Recursos de terceros verificados: coinciden las 65 huellas SHA-256 del manifiesto; se incluyen MIT y OFL.
 - Archivos publicables revisados sin credenciales evidentes, referencias a la marca retirada ni rutas personales; PDFs y capturas incluidos. Ningún archivo supera 7 MB.
 - Consistencia final de rutas: 27 archivos Markdown y 168 enlaces locales comprobados; rutas del adaptador, CSS, SVG y anclas generadas correctas. No hay rutas personales fijadas ni referencias necesarias fuera del paquete autónomo. Las rutas absolutas ilustrativas están señaladas y las ubicaciones estándar del navegador son candidatos de detección.
 - Suite completa ejecutada desde una copia limpia, con un directorio de trabajo externo: 351 pruebas con navegador aprobadas, sin omisiones. Después se aisló únicamente el skill y se generó un PDF de 14 páginas desde rutas con espacios y acentos, en modo estricto y conservando el Markdown. La prueba utilizó el intérprete de pruebas existente; la instalación de dependencias desde cero se verificó por separado, como se indica arriba.
 
-La prueba del ZIP utiliza el instalador real y sustituye únicamente la respuesta de descarga por el contenido local. No demuestra la disponibilidad ni los permisos del futuro repositorio: esa descarga solo puede verificarse después de publicarlo. La sesión real de Claude Code sigue sin comprobarse porque su CLI no está instalado; el adaptador y sus comandos sí se probaron.
+La descarga pública, la instalación de dependencias y la conversión se comprobaron desde una carpeta temporal ajena al proyecto original, en macOS con Google Chrome. La sesión real de Claude Code sigue sin comprobarse porque su CLI no está instalado; el adaptador y sus comandos sí se probaron.
 
-## Pasos al publicar
+## Publicar futuras actualizaciones
 
 1. Usa el repositorio `hansphp/markdown-to-pdf-skill` y la rama `main`. Conserva las URL de instalación alineadas con ese destino; si se mueve el repositorio, actualízalas.
 2. Revisa `git remote -v` y asigna el destino elegido antes de subir. Comprueba que el propietario, el nombre del repositorio y la rama coincidan con las URL de instalación; no reutilices sin verificar un remoto anterior del proyecto.
